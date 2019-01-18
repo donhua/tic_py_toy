@@ -2,7 +2,6 @@
 # -*- coding=utf-8 -*-
 
 import pygame as pg
-import rundom as rnd
 
 pg.init()
 
@@ -27,6 +26,11 @@ while done==False:
         if event.type == pg.QUIT:
             done=True
     screen.fill(white)
+
+    font = pg.font.SysFont('Calibri', 25, True, False)
+    text = font.render("My text", True, black)
+    screen.blit(text, [250,250])
+
     pg.display.flip()
     
     clock.tick(20)
